@@ -1,0 +1,21 @@
+h1 {
+    color: red;
+}
+
+.errors {
+    color:red;
+    padding:5px 5px 5px 10px;
+}
+
+img {
+    width: 40%;
+    height:40%;
+    border: 1px black solid;
+}
+
+#pers_greet {
+    color:blueviolet;
+    padding-left: 10px;
+}
+
+

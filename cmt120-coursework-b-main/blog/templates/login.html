@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<div style="margin:5px;padding:5px;">
+<form method="POST" action="">
+  {{ form.csrf_token }}
+  <p id='email'>{{ form.email.label }} {{ form.email }}</p>
+  <p id='password'>{{ form.password.label }} {{ form.password }}</p>
+  <div>
+    {{ form.remember }}
+    {{ form.remember.label }}
+  </div>
+  <p><input type="submit" value="Login"></p>
+</form>
+</div>
+<div>
+  <small class="text-muted">
+      Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+  </small>
+</div>
+{% endblock content %}

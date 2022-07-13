@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+    <header> 
+        <h4 style="font-family:Arial, Helvetica, sans-serif; text-align: center; padding: 5px;color: blueviolet;font-weight: 100;">Blog Posts</h4>
+    </header>
+    <body>
+    <form method="POST" action="">
+        {{ sorting_form.csrf_token }}
+        <div style="display:flex; gap:12px;padding-top: 15px;padding-bottom: 15px;">
+        <p>{{ sorting_form.sort.label }}</p> 
+        <p>{{ sorting_form.sort }}</p>
+        <small>{{ sorting_form.submit }}</small>
+        </div>
+    </form>
+
+
+    {% for post in posts %} 
+    <div id='blog_post' class="shadow p-3 mb-5 bg-body rounded">
+        <p> <a href="{{ url_for('post', post_id=post.id) }}"><img src="{{ url_for('static', filename='img/' + post.image_file) }}"><br>
+            <h4 class='post_title'><u>{{ post.title }} </u></h4></a></p>
+            <small>by {{ post.user.first_name }}</small> <br>
+            <small> {{ post.date.strftime('%Y-%m-%d')}} </small>
+        <p class='short_description'>{{ post.content[:80] }}</p>
+        </div>
+    {% endfor %}
+        <button></a><a href="{{ url_for('home') }}">Sort posts by most recent</a></button>
+        <button><a href="{{ url_for('home_desc') }}">Sort posts by oldest</a></button>
+    </body>
+{% endblock content %}
