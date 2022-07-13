@@ -1,6 +1,3 @@
-Openshift access URL:
-http://cmt-120-coursework-b-git-flask-lab-cw.apps.openshift.cs.cf.ac.uk/home
-
 Flask references:
 
 All images on this webpage are my own.
