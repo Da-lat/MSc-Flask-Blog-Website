@@ -1,11 +1,5 @@
-Student number: 21118494
-
 Openshift access URL:
 http://cmt-120-coursework-b-git-flask-lab-cw.apps.openshift.cs.cf.ac.uk/home
-
-Final CHECKSUM:
-
-d7d8456a72b96a5c36b1fa2a7bb952ee7e22fd2d
 
 Flask references:
 
