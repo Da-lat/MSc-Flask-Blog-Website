@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'c52ed441a1e4eacfcddd11a81a7ff38e67ac92a77a309d6d'
+app.config['SECRET_KEY'] = ''
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
